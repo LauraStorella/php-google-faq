@@ -78,11 +78,16 @@ $db_faqs = [
     <header></header>
 
 
+    <!-- Sezione FAQs -->
     <main>
-      <section id="faq">
+      <section id="faqs">
         <?php foreach ($db_faqs as $faq) { ?>
-          <?php var_dump($db_faqs); ?>
-           <?php var_dump($faq); ?>
+          <!-- <?php var_dump($db_faqs); ?>
+           <?php var_dump($faq); ?> -->
+          <div class="faq">
+            <h2 class="faq-question"><?php echo $faq['question']?></h1>
+            <p class="faq-answer"><?php echo $faq['answer']?></p>
+          </div>
         <?php } ?>
       </section>
     </main>
