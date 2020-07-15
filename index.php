@@ -75,22 +75,66 @@ $db_faqs = [
   </head>
   <body>
 
-    <header></header>
+    <div id="main-wrapper">
 
-
-    <!-- Sezione FAQs -->
-    <main>
-      <section id="faqs">
-        <?php foreach ($db_faqs as $faq) { ?>
-          <!-- <?php var_dump($db_faqs); ?>
-           <?php var_dump($faq); ?> -->
-          <div class="faq">
-            <h2 class="faq-question"><?php echo $faq['question']?></h1>
-            <p class="faq-answer"><?php echo $faq['answer']?></p>
+      <!-- Header - Navbar -->
+      <header>
+        <nav>
+          <!-- Top-menu -->
+          <div class="menu top-menu">
+            <img id="logo" src="img/google-logo.png" alt="Google Logo">
+            <a href="">Privacy e termini</a>
           </div>
-        <?php } ?>
-      </section>
-    </main>
+            
+
+          <!-- Bottom-menu -->
+          <div class="menu bottom-menu">
+            <ul class="list-unstyled">
+              <li><a href="">Introduzione</a></li>
+              <li><a href="">Norme sulla privacy</a></li>
+              <li><a href="">Termini di servizio</a></li>
+              <li><a href="">Tecnologie</a></li>
+              <li><a href="">Domande frequenti</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+
+      <!-- Sezione FAQs -->
+      <main>
+        <section id="faqs">
+          <?php foreach ($db_faqs as $faq) { ?>
+            <!-- <?php var_dump($db_faqs); ?>
+            <?php var_dump($faq); ?> -->
+            <div class="faq-box">
+              <h2 class="faq-question"><?php echo $faq['question']?></h1>
+              <p class="faq-answer"><?php echo $faq['answer']?></p>
+            </div>
+          <?php } ?>
+        </section>
+      </main>
+
+
+      <!-- Footer -->
+      <footer>
+        <!-- Left-menu -->
+        <div class="menu footer-menu left">
+          <ul class="list-unstyled">
+            <li><a href="">Google</a></li>
+            <li><a href="">Tutto su Google</a></li>
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Termini</a></li>
+          </ul>
+        </div>
+
+        <!-- Right-menu -->
+        <!-- <div class="menu footer-menu right">
+          <img src="img/globe.png" alt="globe">
+        </div> -->
+        
+      </footer>
+    </div>
 
     <script type="text/javascript" src="js/script.js"></script>
 
